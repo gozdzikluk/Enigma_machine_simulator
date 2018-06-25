@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="360.0" minWidth="600.0" styleClass="background" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.enigma.view.EnigmaTextViewController">
+   <children>
+      <ToolBar layoutX="142.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-bar" stylesheets="@../application.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <Label text="Rotor I">
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="rotorA" maxWidth="70.0" minWidth="100.0" prefWidth="100.0" styleClass="filler" />
+            <Label text="Rotor II">
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="rotorB" maxWidth="70.0" minWidth="100.0" prefWidth="100.0" styleClass="filler" />
+            <Label text="Rotor III">
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="rotorC" minWidth="100.0" prefWidth="100.0" styleClass="filler" />
+         </items>
+      </ToolBar>
+      <Label layoutX="244.0" layoutY="40.0" text="Input text to encrypt">
+         <opaqueInsets>
+            <Insets bottom="5.0" />
+         </opaqueInsets></Label>
+      <Label layoutX="264.0" layoutY="170.0" text="Encrypted text" />
+      <TextArea fx:id="output" editable="false" layoutX="15.0" layoutY="197.0" prefHeight="100.0" prefWidth="550.0" styleClass="text-field" wrapText="true" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="decryptText" layoutX="62.0" layoutY="306.0" maxWidth="180.0" minWidth="180.0" mnemonicParsing="false" onAction="#decrypt" prefHeight="40.0" prefWidth="180.0" text="Decrypt" AnchorPane.rightAnchor="60.0" />
+      <Button fx:id="encryptText" layoutX="101.0" layoutY="306.0" maxWidth="180.0" minWidth="180.0" mnemonicParsing="false" onAction="#encrypt" prefHeight="40.0" prefWidth="180.0" text="Encrypt" AnchorPane.leftAnchor="60.0" />
+      <TextArea fx:id="input" layoutX="15.0" layoutY="70.0" prefHeight="100.0" prefWidth="550.0" styleClass="text-field" wrapText="true" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+   </children>
+</AnchorPane>
